@@ -17,3 +17,6 @@ target_link_libraries(MySkillboxApp
         Qt5::Gui
 
         Qt5::Widgets)
+
+При проблемах с debian sudo apt install libxcb-xinerama0
+export QT_DEBUG_PLUGINS=1 (пишем в консоли для отладки приложений QT)

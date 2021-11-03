@@ -1,6 +1,19 @@
-#include <iostream>
-
-int main()
-{
-    std::cout << "QT" << std::endl;
+#include <QApplication>
+#include <QWidget>
+ 
+int main(int argc, char *argv[]) {
+ 
+    // Каждое Qt5-приложение (за исключением консольных) должно включать следующую строку
+    QApplication app(argc, argv);
+ 
+    // Главный виджет, который представляет окно нашей программы
+    QWidget window;
+ 
+    window.resize(250, 150); // изменяем размер виджета в пикселях
+    window.setWindowTitle("Приложение"); // устанавливаем заголовок для главного окна 
+    window.setToolTip("Тест на русском :)"); // устанавливаем всплывающую подсказку для виджета
+    window.show(); // выводим виджет на экран
+ 
+    // С помощью метода exec() запускаем основной цикл нашей программы
+    return app.exec();
 }
