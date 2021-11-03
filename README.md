@@ -20,3 +20,5 @@ target_link_libraries(MySkillboxApp
 
 При проблемах с debian sudo apt install libxcb-xinerama0
 export QT_DEBUG_PLUGINS=1 (пишем в консоли для отладки приложений QT)
+https://wiki.qt.io/Building_Qt_5_from_Git#Linux.2FX11
+https://www.cyberforum.ru/qt/thread2472880.html
