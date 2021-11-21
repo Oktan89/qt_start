@@ -22,3 +22,6 @@ target_link_libraries(MySkillboxApp
 export QT_DEBUG_PLUGINS=1 (пишем в консоли для отладки приложений QT)
 https://wiki.qt.io/Building_Qt_5_from_Git#Linux.2FX11
 https://www.cyberforum.ru/qt/thread2472880.html
+
+Для сборки слотов qt5_wrap_cpp (MOC_SOURCES ${HEADERS})
+http://www.devexp.ru/2010/01/cmake-i-qt/

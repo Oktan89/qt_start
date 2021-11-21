@@ -1,19 +1,17 @@
-#include <QApplication>
-#include <QWidget>
- 
-int main(int argc, char *argv[]) {
- 
-    // Каждое Qt5-приложение (за исключением консольных) должно включать следующую строку
-    QApplication app(argc, argv);
- 
-    // Главный виджет, который представляет окно нашей программы
-    QWidget window;
- 
-    window.resize(500, 250); // изменяем размер виджета в пикселях
-    window.setWindowTitle("Приложение"); // устанавливаем заголовок для главного окна 
-    window.setToolTip("Тест на русском :)"); // устанавливаем всплывающую подсказку для виджета
-    window.show(); // выводим виджет на экран
- 
-    // С помощью метода exec() запускаем основной цикл нашей программы
-    return app.exec();
+#include <QCoreApplication>
+#include <iostream>
+#include <QTimer>
+#include "print.h"
+
+
+int main(int argc, char *argv[])
+{
+    QCoreApplication a(argc, argv);
+    Print p;
+    QTimer t;
+
+    QObject::connect(&t, &QTimer::timeout, &p, &Print::prints);
+    t.start(2000);
+
+    return a.exec();
 }
